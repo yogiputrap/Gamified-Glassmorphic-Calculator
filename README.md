@@ -1,5 +1,5 @@
 # 🎮 Gamified Glassmorphic Calculator
-
+<img width="1920" height="1440" alt="Image" src="https://github.com/user-attachments/assets/22ea253f-17f0-4657-8de8-f2e2f99226cc" />
 A beautiful, modern calculator application with stunning glassmorphic design and engaging gamification features.
 
 ## ✨ Features
