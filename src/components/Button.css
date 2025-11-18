@@ -1,0 +1,99 @@
+.calculator-button {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.calculator-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s, height 0.5s;
+}
+
+.calculator-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.calculator-button:active::before {
+  width: 100%;
+  height: 100%;
+}
+
+.calculator-button.button-pressed {
+  transform: scale(0.95);
+}
+
+.calculator-button.function {
+  background: rgba(255, 184, 77, 0.3);
+  border-color: rgba(255, 184, 77, 0.5);
+}
+
+.calculator-button.function:hover {
+  background: rgba(255, 184, 77, 0.4);
+}
+
+.calculator-button.operator {
+  background: rgba(255, 107, 107, 0.3);
+  border-color: rgba(255, 107, 107, 0.5);
+  font-size: 1.8rem;
+}
+
+.calculator-button.operator:hover {
+  background: rgba(255, 107, 107, 0.4);
+}
+
+.calculator-button.equals {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: rgba(255, 255, 255, 0.4);
+  font-size: 1.8rem;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+}
+
+.calculator-button.equals:hover {
+  box-shadow: 0 6px 25px rgba(102, 126, 234, 0.6);
+  transform: translateY(-2px) scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .calculator-button {
+    padding: 18px;
+    font-size: 1.3rem;
+  }
+
+  .calculator-button.operator,
+  .calculator-button.equals {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calculator-button {
+    padding: 15px;
+    font-size: 1.2rem;
+    border-radius: 12px;
+  }
+
+  .calculator-button.operator,
+  .calculator-button.equals {
+    font-size: 1.4rem;
+  }
+}
