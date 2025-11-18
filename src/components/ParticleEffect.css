@@ -1,0 +1,33 @@
+.particle-container {
+  position: fixed;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #fff, #667eea);
+  border-radius: 50%;
+  animation: particleExplosion 0.8s ease-out forwards;
+  animation-delay: var(--delay);
+  opacity: 0;
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.8);
+}
+
+@keyframes particleExplosion {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: 
+      translate(
+        calc(cos(var(--angle)) * 80px),
+        calc(sin(var(--angle)) * 80px)
+      ) 
+      scale(0);
+    opacity: 0;
+  }
+}
